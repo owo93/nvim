@@ -2,6 +2,7 @@
 
 !.gitignore
 !.init.lua
+!README.md
 
 # Include all fles in the lua directory
 !lua/
