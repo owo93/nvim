@@ -3,5 +3,6 @@
 !.gitignore
 !.init.lua
 
+# Include all fles in the lua directory
 !lua/
 !lua/**/*
