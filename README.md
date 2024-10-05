@@ -1,4 +1,14 @@
-# 💤 LazyVim
+<div align="center">
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+```
+<-. (`-')_      (`-')  _     <-. (`-')  
+   \( OO) )    *(OO ) (*)       \(OO )_ 
+,--./ ,--/,--.(_/,-.\ ,-(`-'),--./  ,-.)
+|   \ |  |\   \ / (_/ | ( OO)|   `.'   |
+|  . '|  |)\   /   /  |  |  )|  |'.'|  |
+|  |\    |_ \     /_)(|  |_/ |  |   |  |
+|  | \   |\-'\   /    |  |'->|  |   |  |
+`--'  `--'    `-'     `--'   `--'   `--'
+```
+
+</div>
