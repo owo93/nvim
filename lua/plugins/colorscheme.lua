@@ -14,7 +14,8 @@ return {
   -- https://github.com/bluz71/vim-nightfly-guicolors
   {
     "bluz71/vim-nightfly-guicolors",
-    event = "User LoadColorSchemes",
+    lazy = true,
+    priority = 1000,
     init = function()
       vim.g.nightflyTransparent = true
       vim.g.nightflyNormalFloat = false
