@@ -39,6 +39,21 @@ return {
     end,
   },
 
+  -- https://github.com/zbirenbaum/copilot.lua
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = function(_, opts)
+      opts.suggestion = { enabled = false }
+      opts.panel = { enabled = false }
+      opts.filetypes = {
+        markdown = true,
+        help = true,
+      }
+    end,
+  },
+
   -- https://github.com/hrsh7th/nvim-cmp
   {
     "hrsh7th/nvim-cmp",
