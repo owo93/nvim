@@ -7,5 +7,4 @@
 # Include all fles in the lua directory
 !lua/
 !lua/**/*
-
-!lazyvim.json
+lazyvim.json
