@@ -132,6 +132,9 @@ return {
         winbar = true,
         content_layout = "center",
       }
+      opts.window = {
+        position = "right",
+      }
     end,
   },
 }
