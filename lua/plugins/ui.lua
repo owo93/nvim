@@ -93,29 +93,6 @@ return {
     end,
   },
 
-  -- https://github.com/nvimdev/dashboard-nvim
-  {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      local logo = [[
-  <-. (`-')_      (`-')  _     <-. (`-')  
-    \( OO) )    _(OO ) (_)       \(OO )_ 
-  ,--./ ,--/,--.(_/,-.\ ,-(`-'),--./  ,-.)
-  |   \ |  |\   \ / (_/ | ( OO)|   `.'   |
-  |  . '|  |)\   /   /  |  |  )|  |'.'|  |
-  |  |\    |_ \     /_)(|  |_/ |  |   |  |
-  |  | \   |\-'\   /    |  |'->|  |   |  |
-  `--'  `--'    `-'     `--'   `--'   `--'
-                                                                            
-      ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-      vim.cmd("highlight DashboardHeader guifg=#d23681 guibg=NONE")
-    end,
-  },
-
   -- https://github.com/nvim-neo-tree/neo-tree.nvim
   {
     "nvim-neo-tree/neo-tree.nvim",
