@@ -120,13 +120,6 @@ return {
   },
   },
 
-  -- https://github.com/smjonas/inc-rename.nvim
-  {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
-  },
-
   -- https://github.com/abecodes/tabout.nvim
   {
     "abecodes/tabout.nvim",

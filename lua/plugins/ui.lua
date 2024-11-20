@@ -14,14 +14,6 @@ return {
     end,
   },
 
-  -- https://github.com/rcarriga/nvim-notify
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 1000,
-    },
-  },
-
   -- https://github.com/akinsho/bufferline.nvim
   {
     "akinsho/bufferline.nvim",
@@ -79,17 +71,6 @@ return {
           return { { icon, guifg = color }, { " " }, { filename } }
         end,
       })
-    end,
-  },
-
-  -- https://github.com/echasnovski/mini.animate
-  {
-    "echasnovski/mini.animate",
-    event = "VeryLazy",
-    opts = function(_, opts)
-      opts.scroll = {
-        enable = false,
-      }
     end,
   },
 
