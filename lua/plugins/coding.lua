@@ -94,12 +94,15 @@ return {
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.window = {
+        completion = cmp.config.window.bordered({
+          winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
+        }),
+        documentation = cmp.config.window.bordered(),
+      }
       table.insert(opts.sources, { name = "emoji" })
-      table.insert(opts.sources, 1, {
-        name = "copilot",
-        group_index = 2,
-        priority = 100,
-      })
+      table.insert(opts.sources, 1, { name = "copilot", group_index = 2, priority = 100 })
     end,
   },
 
