@@ -13,13 +13,13 @@ return {
         },
         sections = {
           { section = "keys", padding = 2 },
-          {
-            title = "Projects",
-            section = "projects",
-            indent = 2,
-            limit = 8,
-            padding = 1,
-          },
+          -- {
+          --   title = "Projects",
+          --   section = "projects",
+          --   indent = 2,
+          --   limit = 8,
+          --   padding = 1,
+          -- },
           {
             title = "Recents",
             section = "recent_files",

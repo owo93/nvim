@@ -120,39 +120,38 @@ return {
   },
   },
 
-  -- https://github.com/abecodes/tabout.nvim
+  --  https://github.com/saghen/blink.cmp
   {
-    "abecodes/tabout.nvim",
-    lazy = false,
-    config = function()
-      require("tabout").setup({
-        tabkey = "<Tab>",
-        backwards_tabkey = "<S-Tab>",
-        act_as_tab = true,
-        act_as_shift_tab = false,
-        default_tab = "<C-t>",
-        default_shift_tab = "<C-d>",
-        enable_backwards = true,
-        completion = false,
-        tabouts = {
-          { open = "'", close = "'" },
-          { open = '"', close = '"' },
-          { open = "`", close = "`" },
-          { open = "(", close = ")" },
-          { open = "[", close = "]" },
-          { open = "{", close = "}" },
-        },
-        ignore_beginning = true,
-        exclude = {},
-      })
-    end,
-    dependencies = { -- These are optional
-      "nvim-treesitter/nvim-treesitter",
-      "L3MON4D3/LuaSnip",
-      "hrsh7th/nvim-cmp",
+    "saghen/blink.cmp",
+    dependencies = {
+      { "rafamadriz/friendly-snippets" },
+      { "giuxtaposition/blink-cmp-copilot" },
     },
-    opt = true,
-    event = "InsertCharPre",
-    priority = 1000,
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+      keymap = { preset = "enter" },
+      completion = {
+        menu = { border = "rounded" },
+        documentation = { window = { border = "rounded" } },
+        list = { selection = "manual" },
+      },
+      signature = {
+        enabled = true,
+        window = { border = "rounded" },
+      },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer", "copilot" },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-cmp-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
+      },
+    },
+    lazy = true,
   },
 }
