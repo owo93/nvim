@@ -20,6 +20,8 @@ return {
       vim.g.nightflyTransparent = true
       vim.g.nightflyNormalFloat = false
       vim.g.nightflyWinSeparator = 2
+      vim.g.nightflyItalics = true
+      vim.g.nightflyUnderlineMatchParen = true
     end,
   },
 }

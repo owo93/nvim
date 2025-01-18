@@ -134,7 +134,6 @@ return {
       completion = {
         menu = { border = "rounded" },
         documentation = { window = { border = "rounded" } },
-        list = { selection = "manual" },
       },
       signature = {
         enabled = true,
