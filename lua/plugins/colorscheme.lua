@@ -17,7 +17,6 @@ return {
     lazy = true,
     priority = 1000,
     init = function()
-      vim.g.nightflyTransparent = true
       vim.g.nightflyNormalFloat = false
       vim.g.nightflyWinSeparator = 2
       vim.g.nightflyItalics = true
