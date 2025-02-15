@@ -6,6 +6,7 @@ return {
   { import = "lazyvim.plugins.extras.lang.tex" },
   { import = "lazyvim.plugins.extras.lang.rust" },
   { import = "lazyvim.plugins.extras.lang.typescript" },
+
   -- https://github.com/williamboman/mason.nvim
   {
     "williamboman/mason.nvim",
