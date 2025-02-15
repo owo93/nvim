@@ -20,7 +20,20 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "rust-analyzer",
       })
     end,
+  },
+
+  -- https://github.com/neovim/nvim-lspconfig
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      servers = {
+        rust_analyzer = {},
+      },
+    },
   },
 }
