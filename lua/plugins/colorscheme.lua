@@ -6,7 +6,10 @@ return {
     priority = 1000,
     opts = function()
       return {
-        transparent = false,
+        transparent = true,
+        sidebars = { "qf", "help" },
+        day_brightness = 0.1,
+        lualine_bold = true,
       }
     end,
   },
