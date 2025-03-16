@@ -8,6 +8,10 @@ return {
       return {
         transparent = true,
         sidebars = { "qf", "help" },
+        on_colors = function(colors)
+          colors.hint = colors.orange
+          colors.error = colors.red
+        end,
         day_brightness = 0.1,
         lualine_bold = true,
       }
