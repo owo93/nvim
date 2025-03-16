@@ -36,12 +36,13 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
-    opts = {
-      options = {
-        icons_enabled = true,
-        theme = "auto",
-      },
-    },
+    opts = function(_, opts)
+      opts.options.icons_enabled = true
+      opts.options.theme = "auto"
+      table.insert(opts.sections.lualine_x, 1, {
+        "lsp_status",
+      })
+    end,
   },
 
   -- https://github.com/b0o/incline.nvim
