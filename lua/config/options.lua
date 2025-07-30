@@ -22,11 +22,11 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.nightflyTransparent = true
 
 if vim.fn.has("nvim-0.8") == 1 then
-  vim.opt.shell = "pwsh.exe"
+	vim.opt.shell = "pwsh.exe"
 end
 
 if vim.g.neovide then
-  vim.g.nightflyTransparent = false
-  -- vim.g.neovide_title_background_color = "011627" -- nightfly bg https://github.com/bluz71/vim-nightfly-colors/blob/674f38e12ffc251bee6c572cfffbf814c1f116e4/autoload/nightfly.vim#L2
-  vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
+	vim.g.nightflyTransparent = false
+	-- vim.g.neovide_title_background_color = "011627" -- nightfly bg https://github.com/bluz71/vim-nightfly-colors/blob/674f38e12ffc251bee6c572cfffbf814c1f116e4/autoload/nightfly.vim#L2
+	vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
