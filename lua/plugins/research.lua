@@ -2,8 +2,13 @@ return {
 	{
 		"chomosuke/typst-preview.nvim",
 		lazy = false,
+		ft = "typst",
 		version = "1.*",
-		opts = {},
+		opts = {
+			port = 3000,
+			open_cmd = "start %s",
+			invert_colors = "auto",
+		},
 	},
 
 	-- add tinymist to lspconfig
@@ -17,8 +22,8 @@ return {
 			servers = {
 				tinymist = {
 					settings = {
-						exportPdf = "onType",
-						outputPath = "$dir/target/$name",
+						formatterMode = "typstyle",
+						semanticTokens = "enable",
 					},
 				},
 			},
