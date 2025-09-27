@@ -29,4 +29,10 @@ return {
 			},
 		},
 	},
+
+	-- https://github.com/larvag/vimtex
+	{
+		"lervag/vimtex",
+		lazy = false,
+	},
 }

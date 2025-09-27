@@ -74,6 +74,9 @@ return {
 				enabled = true,
 				window = { border = "rounded" },
 			},
+			cmdline = {
+				enabled = false,
+			},
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer", "copilot" },
 				providers = {
@@ -89,9 +92,9 @@ return {
 		lazy = true,
 	},
 
-	-- https://github.com/echasnovski/mini.align
+	-- https://github.com/nvim-mini/mini.align
 	{
-		"echasnovski/mini.align",
+		"nvim-mini/mini.align",
 		event = "BufReadPost",
 		config = function()
 			local align = require("mini.align")
