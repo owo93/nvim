@@ -1,21 +1,4 @@
 return {
-
-	-- https://github.com/echasnovski/mini.bracketed
-	{
-		"echasnovski/mini.bracketed",
-		event = "BufReadPost",
-		config = function()
-			local bracketed = require("mini.bracketed")
-			bracketed.setup({
-				file = { suffix = "" },
-				window = { suffix = "" },
-				quickfix = { suffix = "" },
-				yank = { suffix = "" },
-				treesitter = { suffix = "n" },
-			})
-		end,
-	},
-
 	-- https://github.com/zbirenbaum/copilot.lua
 	{
 		"zbirenbaum/copilot.lua",
@@ -36,11 +19,5 @@ return {
 				["."] = false,
 			}
 		end,
-	},
-
-	-- https://github.com/larvag/vimtex
-	{
-		"lervag/vimtex",
-		lazy = false,
 	},
 }
