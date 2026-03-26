@@ -4,5 +4,6 @@
 !init.lua
 !README.md
 
+!lua/
 !lua/**/*
 !.editorconfig
