@@ -7,3 +7,4 @@
 !lua/
 !lua/**/*
 !.editorconfig
+!stylua.toml
