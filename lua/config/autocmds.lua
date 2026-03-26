@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "jsonc", "json" , "markdown" },
+  pattern = { "jsonc", "json", "markdown" },
   callback = function()
     vim.wo.conceallevel = 0
   end,
