@@ -1,4 +1,5 @@
 return {
+  { import = "lazyvim.plugins.extras.lang.git" },
   { import = "lazyvim.plugins.extras.lang.json" },
   { import = "lazyvim.plugins.extras.lang.toml" },
   { import = "lazyvim.plugins.extras.lang.markdown" },
@@ -24,16 +25,4 @@ return {
       })
     end,
   },
-
-  -- https://github.com/neovim/nvim-lspconfig
-  -- {
-  -- 	"neovim/nvim-lspconfig",
-  -- 	---@class PluginLspOpts
-  -- 	opts = {
-  -- 		---@type lspconfig.options
-  -- 		servers = {
-  -- 			rust_analyzer = {},
-  -- 		},
-  -- 	},
-  -- },
 }

@@ -2,16 +2,11 @@ return {
   -- https://github.com/folke/noice.nvim
   {
     "folke/noice.nvim",
-    opts = function(_, opts)
-      opts.presets.lsp_doc_border = true
-      table.insert(opts.routes, {
-        filter = {
-          event = "notify",
-          find = "No information available",
-        },
-        opts = { skip = true },
-      })
-    end,
+    opts = {
+      cmdline = { enabled = false },
+      messages = { enabled = false },
+      popupmenu = { enabled = false },
+    },
   },
 
   -- https://github.com/akinsho/bufferline.nvim
@@ -36,13 +31,22 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
-    opts = function(_, opts)
-      opts.options.icons_enabled = true
-      opts.options.theme = "auto"
-      table.insert(opts.sections.lualine_x, 1, {
-        "lsp_status",
-      })
-    end,
+    opts = {
+      options = {
+        icons_enabled = true,
+        theme = "auto",
+        component_separators = "",
+        section_separators = { left = "", right = "" },
+      },
+      sections = {
+        lualine_a = { { "mode", separator = { left = "", right = "" }, right_padding = 4 } },
+        lualine_b = {},
+        lualine_y = { "lsp_status" },
+        lualine_z = {
+          { "filetype", separator = { left = "", right = "" }, left_padding = 2 },
+        },
+      },
+    },
   },
 
   -- https://github.com/b0o/incline.nvim
