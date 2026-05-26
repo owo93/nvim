@@ -6,6 +6,13 @@ return {
       cmdline = { enabled = false },
       messages = { enabled = false },
       popupmenu = { enabled = false },
+      views = {
+        hover = {
+          border = {
+            style = "rounded",
+          },
+        },
+      },
     },
   },
 
@@ -78,6 +85,21 @@ return {
           return { { icon, guifg = color }, { " " }, { filename } }
         end,
       })
+    end,
+  },
+
+  -- https://github.com/nvim-mini/mini.files
+  {
+    "nvim-mini/mini.files",
+    version = "*",
+    opts = function(_, opts)
+      opts.windows = opts.windows or {}
+      opts.windows.preview = true
+      opts.windows.width_focus = 48
+      opts.windows.width_preview = 100
+
+      opts.options = opts.options or {}
+      opts.options.lsp_timeout = 1000
     end,
   },
 

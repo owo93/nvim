@@ -25,4 +25,23 @@ return {
       })
     end,
   },
+
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      servers = {
+        nixd = {},
+
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--query-driver=**/.platformio/packages/toolchain-*/bin/*",
+          },
+        },
+      },
+    },
+  },
 }
